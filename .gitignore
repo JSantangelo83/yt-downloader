@@ -1,3 +1,4 @@
 out/
-out.rar
+sounds.rar
 venv/
+__pycache__/*
