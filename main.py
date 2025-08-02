@@ -31,7 +31,7 @@ def download():
     if(not links or len(links) < 1):
         return 'There has been an Error'
     
-    os.system('rm -r out out.rar')
+    os.system('rm -r out sounds.rar')
     
     output_dir = "out"
     os.makedirs(output_dir, exist_ok=True)
