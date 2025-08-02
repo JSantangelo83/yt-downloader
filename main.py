@@ -39,9 +39,9 @@ def download():
     for link in links:
         download_audio(link, output_dir)
 
-    os.system('zip -r sounds.zip ./out')
+    os.system('zip -jr sounds.zip ./out/*')
     
-    return send_from_directory('.', 'sounds.rar')
+    return send_from_directory('.', 'sounds.zip')
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)
