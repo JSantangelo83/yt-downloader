@@ -3,6 +3,7 @@ FROM python:3.11-slim
 # Install dependencies: ffmpeg for audio conversion, unrar/rar, and build tools
 RUN apt-get update && apt-get install -y \
     ffmpeg \
+    zip \
     build-essential \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*

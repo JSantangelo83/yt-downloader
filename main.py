@@ -31,7 +31,7 @@ def download():
     if(not links or len(links) < 1):
         return 'There has been an Error'
     
-    os.system('rm -r out sounds.rar')
+    os.system('rm -r out sounds.zip')
     
     output_dir = "out"
     os.makedirs(output_dir, exist_ok=True)
@@ -39,7 +39,7 @@ def download():
     for link in links:
         download_audio(link, output_dir)
 
-    os.system('zip -r sounds.rar ./out')
+    os.system('zip -r sounds.zip ./out')
     
     return send_from_directory('.', 'sounds.rar')
 
