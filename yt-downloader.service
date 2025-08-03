@@ -1,7 +1,6 @@
 [Unit]
 Description=YouTube Downloader
-After=network.target docker.service
-Requires=docker.service
+After=network.target
 
 [Service]
 WorkingDirectory=%h/yt-downloader
